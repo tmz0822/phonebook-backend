@@ -8,7 +8,8 @@
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:ui": "@powershell Remove-Item -Recurse -Force dist && cd ../part2/phonebook-frontend && npm run build && @powershell Copy-Item build -Recurse ../../part3-phonebook-backend",
-    "deploy:full": "npm run build:ui & git add . && git commit -m uibuild && git push"
+    "deploy:full": "npm run build:ui & git add . && git commit -m uibuild && git push",
+    "lint": "eslint ."
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +21,7 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "eslint": "^8.48.0",
     "nodemon": "^3.0.1"
   }
 }
